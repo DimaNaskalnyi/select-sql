@@ -1,12 +1,12 @@
-INSERT INTO SalesLT.ProductTMP_228228 (Name,ProductNumber,Color,StandardCost,ListPrice,Size,Weight,ProductCategoryID)
+INSERT INTO SalesLT.ProductTMP_009 (Name,ProductNumber,Color,StandardCost,ListPrice,Size,Weight,ProductCategoryID)
 SELECT Name,ProductNumber,Color,StandardCost,ListPrice,Size,Weight,ProductCategoryID
 FROM SalesLT.Product
 
-INSERT INTO SalesLT.ColorTMP_228228 (NameColor)
+INSERT INTO SalesLT.ColorTMP_009 (NameColor)
 SELECT Color
 FROM SalesLT.Product
 WHERE Color IS NOT NULL
 
-UPDATE SalesLT.ProductTMP_228228
+UPDATE SalesLT.ProductTMP_009
 SET ColorID = table2.ColorID
-FROM SalesLT.ColorTMP_228228 as table2
+FROM SalesLT.ColorTMP_009 as table2
