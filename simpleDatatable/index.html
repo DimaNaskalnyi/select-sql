@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DATATABLE</title>
+    <link href="bootstrap4.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" >
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="datatable.js"></script>
+
+
+    <style>
+        tr:hover{
+            transform: scaleX(1.01);
+            color: white;
+            background-color: #4b5257;
+            box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+        }
+        tr:hover a{
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="datatable" style=": center; width: 70%; margin: 0 auto; background-color: #f8f8f8; border-radius: 50px; padding: 30px 30px 100px 30px">
+
+</div>
+
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyB1sVAX2NnnjeCJYNpMTxs7OJo7TJOlGj8",
+        authDomain: "jsjsjs-67169.firebaseapp.com",
+        databaseURL: "https://jsjsjs-67169.firebaseio.com",
+        projectId: "jsjsjs-67169",
+        storageBucket: "jsjsjs-67169.appspot.com",
+        messagingSenderId: "297738253438"
+    };
+    firebase.initializeApp(config);
+    var dataTableExample = new SimpleDataTableWidget('#datatable');
+</script>
+</body>
+</html>
